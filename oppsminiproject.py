@@ -36,14 +36,14 @@ class CurrentAccount(Account):
             print("over the limit")
 
 class Bank:
-    def __inti__(self, name, city):
+    def __init__(self, name, city):
         self.name = name
         self.city = city
         self.__accounts ={}
 
     def create_account(self, id, holder_name, type):
         if type =="savings":
-            new_account = savingsAccount(id, holder_name, type)  
+            new_account = savingsAccount(id, holder_name)  
         else:
             type=="Current"
             new_account =CurrentAccount(id, holder_name)
@@ -71,4 +71,6 @@ c1.deposit(10)
 s1.withdraw(2000)
 c1.withdraw(20)
 
-s1.calculate_interest()
+s1.calculate_intrest()
+
+
